@@ -2,7 +2,6 @@
 Assignment 1 - Tic-Tac-Toe
 Author: Thiago Silva
 '''
-import string
 
 
 class bcolors:
@@ -46,18 +45,24 @@ def main():
                 player = next_player(player)
                 the_winner = has_winner(tic_tac__toe_board)            
                 its_a_draw = is_a_draw(tic_tac__toe_board)
+                print(the_winner)
+                print(its_a_draw)
             else:
                 break
         display_board(tic_tac__toe_board)
-        if current_player == "x":
-            print(f"{bcolors.OKBLUE}Congratulations {x}, you won the game!.{bcolors.ENDC}") 
-            print("\n\n             ╲╭━━━━╮╲╲\n             ╲┃╭╮╭╮┃╲╲\n             ┗┫┏━━┓┣┛╲\n             ╲┃╰━━╯┃ ╲\n             ╲╰┳━━┳╯╲╲\n             ╲╲┛╲╲┗╲╲╲\n\n")
+        if the_winner == 1 and its_a_draw!= 1:
+            if current_player == "x":
+                print(f"{bcolors.OKBLUE}Congratulations {x}, you won the game!.{bcolors.ENDC}") 
+                print("\n\n             ╲╭━━━━╮╲╲\n             ╲┃╭╮╭╮┃╲╲\n             ┗┫┏━━┓┣┛╲\n             ╲┃╰━━╯┃ ╲\n             ╲╰┳━━┳╯╲╲\n             ╲╲┛╲╲┗╲╲╲\n\n")
+            else:
+                print(f"{bcolors.OKGREEN}Congratulations {o}, you won the game!.{bcolors.ENDC}") 
+                print("\n\n             ╲╭━━━━╮╲╲\n             ╲┃╭╮╭╮┃╲╲\n             ┗┫┏━━┓┣┛╲\n             ╲┃╰━━╯┃ ╲\n             ╲╰┳━━┳╯╲╲\n             ╲╲┛╲╲┗╲╲╲\n\n")
         else:
-            print(f"{bcolors.OKGREEN}Congratulations {o}, you won the game!.{bcolors.ENDC}") 
-            print("\n\n             ╲╭━━━━╮╲╲\n             ╲┃╭╮╭╮┃╲╲\n             ┗┫┏━━┓┣┛╲\n             ╲┃╰━━╯┃ ╲\n             ╲╰┳━━┳╯╲╲\n             ╲╲┛╲╲┗╲╲╲\n\n")
+            print("\nIt's a draw!\n")
         new_game = str(input("DO YOU WANT TO START A NEW GAME? "))
         
-print("HOPE YOU PLAY AGAIN SOON!")
+        
+    print("HOPE YOU PLAY AGAIN SOON!")
 
 def create_board():
     tic_tac__toe_board = []
