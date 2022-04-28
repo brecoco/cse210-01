@@ -23,9 +23,11 @@ def main():
     print()
     print()
     new_game = str(input("DO YOU WANT TO START A NEW GAME? "))
+    new_game = new_game.lower()
     while new_game != "yes" and new_game!= "no":
         print("Wrong option, try again!")
         new_game = str(input("DO YOU WANT TO START A NEW GAME? "))
+        new_game = new_game.lower()        
     while new_game == "yes":
         print("\n\n                           ╔╗╔═╦╗\n                           ║╚╣║║╚╗\n                           ╚═╩═╩═╝\n\n")
         x=str(input("NAME OF THE FIRST PLAYER: "))
@@ -60,6 +62,7 @@ def main():
         else:
             print("\nIt's a draw!\n")
         new_game = str(input("DO YOU WANT TO START A NEW GAME? "))
+        new_game = new_game.lower()
         
         
     print("HOPE YOU PLAY AGAIN SOON!")
